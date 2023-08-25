@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+
+body {
+  font-family: "Roboto", sans-serif;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("https://cdn.pixabay.com/photo/2017/08/30/16/12/argentina-2697664_1280.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+/* h1 */
+
+h1 {
+  font-family: "Muli", sans-serif;
+  color: #ffffff;
+  position: absolute;
+  top: 5%;
+  font-size: 50px;
+  user-select: none;
+}
+
+/* CONTAINER */
+
+.container {
+  display: flex;
+  height: 70vh;
+  width: 100vw;
+  justify-content: center;
+  position: absolute;
+  top: 17%;
+}
+
+/* CARD */
+
+.card:hover {
+  cursor: pointer;
+}
+
+.card {
+  min-width: 50px;
+  width: 80px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 50px;
+  opacity: 0.5;
+  transition: 2s;
+  position: relative;
+}
+
+/* h3 */
+
+.title {
+  color: #ffffff;
+  position: absolute;
+  bottom: 20px;
+  left: 25px;
+  opacity: 0;
+  font-size: 27px;
+  font-weight: bolder;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* ACTIVE CARD */
+
+.active {
+  transition: 1.7s;
+  flex: 0.5;
+  opacity: 1;
+}
+
+.active h3 {
+  opacity: 1;
+  transition: 1.7s ease-in;
+}
+
+/* CARD IMAGES */
+
+.first.card {
+  background-image: url("https://images.unsplash.com/photo-1686530489698-d74e6f165b87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80");
+}
+
+.second.card {
+  background-image: url("https://images.unsplash.com/photo-1610995195985-7229a1409d4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80");
+}
+
+.third.card {
+  background-image: url("https://images.unsplash.com/photo-1575393476573-6cdacd2e8c88?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80");
+}
+
+.fourth.card {
+  background-image: url("https://images.unsplash.com/photo-1584499046279-bd273a172451?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1385&q=80");
+}
+
+.fifth.card {
+  background-image: url("https://images.unsplash.com/photo-1538703012804-b74999aa11b9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80");
+}
+
+@media (max-width: 570px) {
+  h1 {
+    top: 5%;
+    text-align: center;
+    font-size: 30px;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90vw;
+    height: 90vh;
+    border-radius: 20px;
+    opacity: 1;
+  }
+
+  .title {
+    bottom: 10px;
+    left: 15px;
+    opacity: 1;
+    font-size: 17px;
+  }
+}
